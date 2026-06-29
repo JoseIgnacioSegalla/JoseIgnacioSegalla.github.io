@@ -384,16 +384,19 @@ nav a:hover::after {
     margin-bottom: 2rem;
 }
 
-.contact .btn {
+.btn-contact {
     background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
     border: none;
     color: white;
     padding: 1.2rem 3.5rem;
     font-size: 1rem;
-    transition: all 0.4s ease;
 }
 
-.contact .btn:hover {
+.btn-contact::before {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.btn-contact:hover {
     transform: translateY(-4px);
     box-shadow: 0 15px 35px rgba(212, 165, 116, 0.3);
 }
