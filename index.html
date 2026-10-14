@@ -157,7 +157,7 @@
     <section id="cortinas" class="section section-cortinas">
         <h2 class="section-title">Paleta de cortinas</h2>
         <div class="color-selector">
-            <p class="section-copy">Selecciona un tono para ver cómo se integra la cortina en una propuesta de ambiente.</p>
+            <p class="section-copy">Elige un color liso para la cortina roller y visualízala centrada en una ventana con vista al patio.</p>
             <div class="color-bubbles" role="group" aria-label="Paleta de colores de cortinas">
                 <button class="color-bubble is-selected" type="button" data-color="#f1f1ee" data-name="Gris muy claro" aria-label="Gris muy claro" aria-pressed="true">
                     <span class="bubble-swatch" style="--bubble-color: #f1f1ee;"></span>
@@ -192,25 +192,14 @@
                     <span>Negro o gris muy oscuro</span>
                 </button>
             </div>
-            <label class="color-picker" for="custom-curtain-color">
-                <span>O elige un color personalizado</span>
-                <input id="custom-curtain-color" type="color" value="#f1f1ee" aria-label="Elegir color personalizado para la cortina">
-            </label>
         </div>
 
         <div class="curtain-preview-card">
             <div class="curtain-preview" aria-live="polite">
                 <div class="curtain-preview__scene">
-                    <img class="curtain-preview__environment" src="Images/Comedor/comedor1.webp" alt="" aria-hidden="true">
-                    <div class="curtain-preview__blind" aria-hidden="true">
-                        <div class="curtain-preview__fabric"></div>
-                        <div class="curtain-preview__roller"></div>
-                        <div class="curtain-preview__bottom-rail"></div>
-                    </div>
-                </div>
-                <div class="curtain-preview__info">
-                    <h3 id="selected-color-name">Gris muy claro</h3>
-                    <p>El ambiente permanece fijo; cambia el color de la capa de tela para comparar la cortina.</p>
+                    <img class="curtain-preview__image" src="Images/Cortinas/cortina_0.webp" alt="Ambiente con dos cortinas roller y vista exterior">
+                    <div class="curtain-preview__tint curtain-preview__tint--left" aria-hidden="true"></div>
+                    <div class="curtain-preview__tint curtain-preview__tint--right" aria-hidden="true"></div>
                 </div>
             </div>
         </div>
@@ -249,14 +238,9 @@
     <script>
         const colorBubbles = document.querySelectorAll('.color-bubble');
         const preview = document.querySelector('.curtain-preview');
-        const selectedColorName = document.getElementById('selected-color-name');
-        const customColorInput = document.getElementById('custom-curtain-color');
 
-        function updatePreview(color, label) {
+        function updatePreview(color) {
             preview.style.setProperty('--curtain-color', color);
-            selectedColorName.textContent = label;
-            customColorInput.value = color;
-
             colorBubbles.forEach((bubble) => {
                 const isSelected = bubble.dataset.color === color;
                 bubble.classList.toggle('is-selected', isSelected);
@@ -266,15 +250,11 @@
 
         colorBubbles.forEach((bubble) => {
             bubble.addEventListener('click', () => {
-                updatePreview(bubble.dataset.color, bubble.dataset.name);
+                updatePreview(bubble.dataset.color);
             });
         });
 
-        customColorInput.addEventListener('input', () => {
-            updatePreview(customColorInput.value, `Color personalizado: ${customColorInput.value.toUpperCase()}`);
-        });
-
-        updatePreview('#f1f1ee', 'Gris muy claro');
+        updatePreview('#f1f1ee');
     </script>
 
 </body>
