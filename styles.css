@@ -56,6 +56,10 @@ header {
   display: block;
 }
 
+.menu-toggle {
+        display: none;
+}
+
 nav ul { 
     display: flex; 
     gap: 2.5rem; 
@@ -267,6 +271,7 @@ nav a:hover::after {
 /* --- SECCIONES GENERALES --- */
 .section { 
     padding: 6rem 5%;
+    scroll-margin-top: 100px;
 }
 
 .section:nth-child(even) {
@@ -436,7 +441,7 @@ nav a:hover::after {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    cursor: pointer;
+    cursor: default;
 }
 
 .project-card:hover {
@@ -463,16 +468,17 @@ nav a:hover::after {
     padding: 2rem;
     background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.95) 60%);
     color: white;
-    opacity: 0;
-    transition: opacity 0.4s ease;
+    opacity: 1;
+    transition: background 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 100%;
+    height: auto;
+    min-height: 42%;
 }
 
 .project-card:hover .project-info { 
-    opacity: 1; 
+    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.97) 38%);
 }
 
 .project-info h3 {
@@ -528,6 +534,93 @@ nav a:hover::after {
 
 .about-content img:hover {
     transform: scale(1.02);
+}
+
+.section-location {
+    background: var(--light-bg);
+}
+
+.location-content {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.map-card,
+.instagram-card {
+    overflow: hidden;
+    min-height: 300px;
+    border: 1px solid rgba(26, 26, 26, 0.08);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+.map-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.map-card iframe {
+    flex: 1;
+    width: 100%;
+    min-height: 250px;
+    border: 0;
+}
+
+.map-link {
+    padding: 0.9rem 1.2rem;
+    color: var(--accent-dark);
+    font-weight: 600;
+}
+
+.map-link:hover {
+    color: var(--text-color);
+}
+
+.instagram-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem;
+    color: white;
+    background: linear-gradient(145deg, #833ab4, #c13584 48%, #f77737);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.instagram-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(131, 58, 180, 0.25);
+}
+
+.instagram-card__icon {
+    display: grid;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 1.5rem;
+    place-items: center;
+    border: 2px solid currentColor;
+    border-radius: 16px;
+    font-size: 2.6rem;
+    line-height: 1;
+}
+
+.instagram-card__label {
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+}
+
+.instagram-card__handle {
+    margin-top: 0.25rem;
+    opacity: 0.9;
+}
+
+.instagram-card__action {
+    margin-top: 1.5rem;
+    font-weight: 600;
 }
 
 .contact {
@@ -638,8 +731,75 @@ footer {
         letter-spacing: 2px;
     }
     
-    nav { 
-        display: none; 
+    .menu-toggle {
+        display: flex;
+        width: 46px;
+        height: 46px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        border: 1px solid rgba(26, 26, 26, 0.14);
+        border-radius: 50%;
+        background: #fff;
+        cursor: pointer;
+        z-index: 1002;
+    }
+
+    .menu-toggle span {
+        width: 19px;
+        height: 2px;
+        border-radius: 2px;
+        background: var(--text-color);
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .menu-toggle[aria-expanded="true"] span:first-child {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle[aria-expanded="true"] span:last-child {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    header nav {
+        display: block;
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        width: 100%;
+        padding: 0 4%;
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 14px 22px rgba(0, 0, 0, 0.1);
+        max-height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease, visibility 0.3s ease;
+    }
+
+    header nav.is-open {
+        max-height: 80vh;
+        padding: 0.75rem 4% 1rem;
+        visibility: visible;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    header nav li + li {
+        border-top: 1px solid rgba(26, 26, 26, 0.08);
+    }
+
+    header nav a {
+        display: block;
+        padding: 0.9rem 0;
     }
     
     .hero {
@@ -692,6 +852,18 @@ footer {
     .about-content {
         gap: 2rem;
         flex-direction: column;
+    }
+
+    .location-content {
+        grid-template-columns: 1fr;
+    }
+
+    .map-card {
+        min-height: 330px;
+    }
+
+    .instagram-card {
+        min-height: 250px;
     }
     
     .project-card {

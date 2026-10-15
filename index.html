@@ -3,7 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LD DECORACIONES | Arquitectura y Decoraciones    </title>
+    <meta name="description" content="LD Decoraciones: diseño de cocinas, comedores, baños, patios y cortinas roller. Proyectos y asesoramiento personalizado. Contactanos por WhatsApp.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="LD Decoraciones">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://lddecoraciones.com.ar/">
+    <title>LD Decoraciones | Arquitectura, interiores y cortinas roller</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:site_name" content="LD Decoraciones">
+    <meta property="og:title" content="LD Decoraciones | Arquitectura e interiores">
+    <meta property="og:description" content="Diseño de cocinas, comedores, baños, patios y cortinas roller. Conocé nuestros proyectos y contactanos.">
+    <meta property="og:url" content="https://lddecoraciones.com.ar/">
+    <meta property="og:image" content="https://lddecoraciones.com.ar/Images/Fondo.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LD Decoraciones | Arquitectura e interiores">
+    <meta name="twitter:description" content="Diseño de interiores, espacios residenciales y cortinas roller.">
+    <meta name="twitter:image" content="https://lddecoraciones.com.ar/Images/Fondo.webp">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "LD Decoraciones",
+        "url": "https://lddecoraciones.com.ar/",
+        "image": "https://lddecoraciones.com.ar/Images/Fondo.webp",
+        "telephone": "+5491169023721",
+        "sameAs": [
+            "https://www.instagram.com/lddecoraciones/"
+        ],
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -34.6360794,
+            "longitude": -58.4384441
+        }
+    }
+    </script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,13 +49,20 @@
   <div class="logo">
     <img src="Images/LD.webp" alt="LD Decoraciones" />
   </div>
-  <nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav id="main-navigation">
     <ul>
       <li><a href="#cocina">Cocinas</a></li>
       <li><a href="#comedor">Comedor</a></li>
       <li><a href="#baño">Baños</a></li>
       <li><a href="#patio">Patios</a></li>
+            <li><a href="#cortinas">Paleta de cortinas</a></li>
       <li><a href="#nosotros">Estudio</a></li>
+    <li><a href="#visitanos">Visítanos</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
@@ -30,9 +73,8 @@
         <h1>Arquitectura & Decoraciones</h1>
         <p>Diseño arquitectónico que transforma espacios y estilos de vida. <br>Consultas personalizadas y proyectos llave en mano.</p>
         <div class="cta-buttons">
-            <!-- REEMPLAZA EL NÚMERO ABAJO CON EL TUYO -->
-            <a href="tel:+1234567890" class="btn">Llamar Ahora</a>
-            <a href="https://wa.me/1234567890" class="btn btn-whatsapp">WhatsApp</a>
+            <a href="tel:+5491169023721" class="btn">Llamar Ahora</a>
+            <a href="https://wa.me/5491169023721" class="btn btn-whatsapp">WhatsApp</a>
         </div>
     </section>
 
@@ -71,28 +113,28 @@
     <section id="comedor" class="section" style="background-color: var(--light-bg);">
         <h2 class="section-title">Comedor</h2>
         <div class="gallery">
-            <!-- Producto 1 -->
+            <!-- Comedor contemporáneo -->
             <div class="project-card">
-                <img src="Images/Comedor/comedor1.webp" alt="Producto 1">
+                <img src="Images/Comedor/comedor1.webp" alt="Comedor contemporáneo con mesa de madera, sillas tapizadas y muro de piedra">
                 <div class="project-info">
-                    <h3>Producto 1</h3>
-                    <p>Descripción del producto</p>
+                    <h3>Comedor contemporáneo</h3>
+                    <p>Mesa amplia de madera, sillas tapizadas y muro de piedra con vista al jardín.</p>
                 </div>
             </div>
-            <!-- Producto 2 -->
+            <!-- Cocina y comedor integrados -->
             <div class="project-card">
-                <img src="Images/Comedor/comedor2.webp" alt="Producto 2">
+                <img src="Images/Comedor/comedor2.webp" alt="Cocina moderna integrada con comedor y detalles en amarillo">
                 <div class="project-info">
-                    <h3>Producto 2</h3>
-                    <p>Descripción del producto</p>
+                    <h3>Cocina y comedor integrados</h3>
+                    <p>Diseño abierto con mobiliario claro, iluminación cálida y acentos amarillos.</p>
                 </div>
             </div>
-            <!-- Producto 3 -->
+            <!-- Comedor con pared decorativa -->
             <div class="project-card">
-                <img src="Images/Comedor/comedor3.webp" alt="Producto 3">
+                <img src="Images/Comedor/comedor3.webp" alt="Comedor elegante con pared estampada y sillas de acento rojas">
                 <div class="project-info">
-                    <h3>Producto 3</h3>
-                    <p>Descripción del producto</p>
+                    <h3>Comedor con pared decorativa</h3>
+                    <p>Papel mural ornamental, sillas de acento y una paleta de tonos cálidos.</p>
                 </div>
             </div>
         </div>
@@ -159,37 +201,37 @@
         <div class="color-selector">
             <p class="section-copy">Elige un color liso para la cortina roller y visualízala centrada en una ventana con vista al patio.</p>
             <div class="color-bubbles" role="group" aria-label="Paleta de colores de cortinas">
-                <button class="color-bubble is-selected" type="button" data-color="#f1f1ee" data-name="Gris muy claro" aria-label="Gris muy claro" aria-pressed="true">
+                <button class="color-bubble is-selected" type="button" data-color="#f1f1ee" data-name="Perla" aria-label="Perla" aria-pressed="true">
                     <span class="bubble-swatch" style="--bubble-color: #f1f1ee;"></span>
-                    <span>Gris muy claro</span>
+                    <span>Perla</span>
                 </button>
-                <button class="color-bubble" type="button" data-color="#e7d8bd" data-name="Beige claro" aria-label="Beige claro" aria-pressed="false">
+                <button class="color-bubble" type="button" data-color="#e7d8bd" data-name="Lino natural" aria-label="Lino natural" aria-pressed="false">
                     <span class="bubble-swatch" style="--bubble-color: #e7d8bd;"></span>
-                    <span>Beige claro</span>
+                    <span>Lino natural</span>
                 </button>
-                <button class="color-bubble" type="button" data-color="#c8a97b" data-name="Beige medio" aria-label="Beige medio" aria-pressed="false">
+                <button class="color-bubble" type="button" data-color="#c8a97b" data-name="Arena" aria-label="Arena" aria-pressed="false">
                     <span class="bubble-swatch" style="--bubble-color: #c8a97b;"></span>
-                    <span>Beige medio</span>
+                    <span>Arena</span>
                 </button>
-                <button class="color-bubble" type="button" data-color="#cbbca7" data-name="Gris beige" aria-label="Gris beige" aria-pressed="false">
+                <button class="color-bubble" type="button" data-color="#cbbca7" data-name="Greige cálido" aria-label="Greige cálido" aria-pressed="false">
                     <span class="bubble-swatch" style="--bubble-color: #cbbca7;"></span>
-                    <span>Gris beige</span>
+                    <span>Greige cálido</span>
                 </button>
-                <button class="color-bubble" type="button" data-color="#d4d4d0" data-name="Gris claro" aria-label="Gris claro" aria-pressed="false">
+                <button class="color-bubble" type="button" data-color="#d4d4d0" data-name="Gris nube" aria-label="Gris nube" aria-pressed="false">
                     <span class="bubble-swatch" style="--bubble-color: #d4d4d0;"></span>
-                    <span>Gris claro</span>
+                    <span>Gris nube</span>
                 </button>
-                <button class="color-bubble" type="button" data-color="#6e757e" data-name="Gris medio oscuro" aria-label="Gris medio oscuro" aria-pressed="false">
+                <button class="color-bubble" type="button" data-color="#6e757e" data-name="Pizarra" aria-label="Pizarra" aria-pressed="false">
                     <span class="bubble-swatch" style="--bubble-color: #6e757e;"></span>
-                    <span>Gris medio oscuro</span>
+                    <span>Pizarra</span>
                 </button>
-                <button class="color-bubble" type="button" data-color="#6f7d93" data-name="Gris azulado" aria-label="Gris azulado" aria-pressed="false">
+                <button class="color-bubble" type="button" data-color="#6f7d93" data-name="Azul humo" aria-label="Azul humo" aria-pressed="false">
                     <span class="bubble-swatch" style="--bubble-color: #6f7d93;"></span>
-                    <span>Gris azulado</span>
+                    <span>Azul humo</span>
                 </button>
-                <button class="color-bubble" type="button" data-color="#2f2f2f" data-name="Negro o gris muy oscuro" aria-label="Negro o gris muy oscuro" aria-pressed="false">
+                <button class="color-bubble" type="button" data-color="#2f2f2f" data-name="Carbón" aria-label="Carbón" aria-pressed="false">
                     <span class="bubble-swatch" style="--bubble-color: #2f2f2f;"></span>
-                    <span>Negro o gris muy oscuro</span>
+                    <span>Carbón</span>
                 </button>
             </div>
         </div>
@@ -220,12 +262,34 @@
         </div>
     </section>
 
+    <section id="visitanos" class="section section-location">
+        <h2 class="section-title">Visítanos y síguenos</h2>
+        <div class="location-content">
+            <div class="map-card">
+                <iframe
+                    title="Ubicación de LD Decoraciones en Google Maps"
+                    src="https://maps.google.com/maps?q=-34.6360794,-58.4384441&z=16&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen>
+                </iframe>
+                <a class="map-link" href="https://www.google.com/maps/place/LD+DECORACIONES/@-34.6360435,-58.4385673,17z/data=!4m6!3m5!1s0x95bccbb50cdaa8fd:0x6cabb248cec0a072!8m2!3d-34.6360794!4d-58.4384441!16s%2Fg%2F11b70_blb2?entry=ttu" target="_blank" rel="noopener noreferrer">Abrir ubicación en Google Maps</a>
+            </div>
+            <a class="instagram-card" href="https://www.instagram.com/lddecoraciones/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram de LD Decoraciones">
+                <span class="instagram-card__icon" aria-hidden="true">◎</span>
+                <span class="instagram-card__label">Instagram</span>
+                <span class="instagram-card__handle">@lddecoraciones</span>
+                <span class="instagram-card__action">Ver perfil ↗</span>
+            </a>
+        </div>
+    </section>
+
     
 
     <!-- Contacto -->
     <section id="contacto" class="section contact">
         <h2 class="section-title">Hablemos de tu Proyecto</h2>
-        <a href="https://wa.me/1234567890" class="btn btn-contact">
+        <a href="https://wa.me/5491169023721" class="btn btn-contact">
             <span class="btn-icon">💬</span>
             <span>Agendar cita por WhatsApp</span>
         </a>
@@ -236,6 +300,32 @@
     </footer>
 
     <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNavigation = document.getElementById('main-navigation');
+
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+            menuToggle.setAttribute('aria-label', isExpanded ? 'Abrir menú' : 'Cerrar menú');
+            mainNavigation.classList.toggle('is-open', !isExpanded);
+        });
+
+        mainNavigation.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Abrir menú');
+                mainNavigation.classList.remove('is-open');
+            });
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Abrir menú');
+                mainNavigation.classList.remove('is-open');
+            }
+        });
+
         const colorBubbles = document.querySelectorAll('.color-bubble');
         const preview = document.querySelector('.curtain-preview');
 
