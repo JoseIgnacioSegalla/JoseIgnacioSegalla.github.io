@@ -122,6 +122,15 @@ nav a:hover::after {
     animation: slideInDown 0.8s ease-out;
     z-index: 2;
     position: relative;
+    mix-blend-mode: screen;
+}
+
+.hero__monogram {
+    display: block;
+    width: clamp(90px, 11vw, 145px);
+    height: auto;
+    margin: 0 auto 0.35rem;
+    filter: invert(1);
 }
 
 .hero p {
@@ -941,6 +950,10 @@ footer {
         font-size: 3rem;
         margin-top: 3rem;
         letter-spacing: 1px;
+    }
+
+    .hero__monogram {
+        width: 82px;
     }
     
     .hero p { 
