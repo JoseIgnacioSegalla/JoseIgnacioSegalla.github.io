@@ -83,13 +83,13 @@ nav a:hover::after {
 
 /* --- HERO (PORTADA) --- */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 1rem;
+    padding: 7rem 1.5rem 4rem;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), 
                 url('Images/Fondo.webp');
     background-size: cover;
@@ -113,10 +113,14 @@ nav a:hover::after {
 }
 
 .hero h1 {
-    font-size: 5rem;
+    width: 100%;
+    max-width: 1100px;
+    font-size: clamp(2.5rem, 6.2vw, 5rem);
     font-weight: 200;
     margin-bottom: 1rem;
-    letter-spacing: 2px;
+    letter-spacing: clamp(0.02em, 0.18vw, 2px);
+    line-height: 1.12;
+    text-wrap: balance;
     text-shadow: 0 4px 20px rgba(0,0,0,0.4);
     font-family: var(--font-display);
     animation: slideInDown 0.8s ease-out;
@@ -134,8 +138,9 @@ nav a:hover::after {
 }
 
 .hero p {
-    font-size: 1.4rem;
+    width: 100%;
     max-width: 700px;
+    font-size: clamp(1rem, 1.8vw, 1.4rem);
     margin-bottom: 3rem;
     font-weight: 300;
     opacity: 0.98;
@@ -148,6 +153,8 @@ nav a:hover::after {
 
 .cta-buttons {
     display: flex;
+    width: 100%;
+    max-width: 640px;
     gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
@@ -198,7 +205,8 @@ nav a:hover::after {
     position: relative;
     overflow: hidden;
     border-radius: 999px;
-    min-width: 280px;
+    min-width: min(280px, 100%);
+    max-width: 100%;
 }
 
 .btn-icon {
@@ -1016,32 +1024,37 @@ footer {
     }
     
     .hero {
-        height: 80vh;
+        height: auto;
+        min-height: 80vh;
+        padding: 6.5rem 1rem 3rem;
     }
     
     .hero h1 { 
-        font-size: 3rem;
-        margin-top: 3rem;
-        letter-spacing: 1px;
+        max-width: 600px;
+        margin-top: 0;
+        font-size: clamp(1.8rem, 8.5vw, 3rem);
+        letter-spacing: 0.02em;
     }
 
     .hero__monogram {
-        width: 96px;
-        margin-bottom: 1.2rem;
+        width: clamp(68px, 22vw, 96px);
+        margin: 0 auto 1rem;
     }
     
     .hero p { 
-        font-size: 1.1rem;
-        margin-bottom: 2rem;
+        font-size: clamp(0.95rem, 4vw, 1.1rem);
+        margin-bottom: 1.5rem;
     }
     
     .cta-buttons { 
         gap: 1rem;
         flex-direction: column;
+        max-width: 360px;
     }
     
     .btn { 
-        padding: 0.95rem 2rem; 
+        min-width: 0;
+        padding: 0.95rem 1rem;
         font-size: 0.8rem;
         width: 100%;
     }
